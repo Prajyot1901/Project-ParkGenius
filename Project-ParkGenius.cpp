@@ -1125,18 +1125,18 @@ void simulate(parking* cityCenter)
         display.setPosition(Vector2f(20.f, 135.f));
         window.draw(display);
 
-        dis.setString(" Empty Upper Stack  ");
+        dis.setString(" Upper Stack Available ");
         dis.setCharacterSize(30);
         dis.setPosition(Vector2f(1640.f, 90.f));
         dis.setFont(font);
         window.draw(dis);
-        dis.setString(" Full Upper Stack  ");
+        dis.setString(" Upper Stack Occupied ");
         dis.setPosition(Vector2f(1640.f, 130.f));
         window.draw(dis);
-        dis.setString(" Empty Lower Stack  ");
+        dis.setString(" Lower Stack Available ");
         dis.setPosition(Vector2f(60.f, 90.f));
         window.draw(dis);
-        dis.setString(" Full Lower Stack ");
+        dis.setString(" Lower Stack Occupied ");
         dis.setPosition(Vector2f(60.f, 130.f));
         window.draw(dis);
 
