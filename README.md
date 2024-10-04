@@ -6,18 +6,12 @@ ParkGenius is an advanced parking management system designed for the City Center
 
 ## Key Features
 
-### 1. Real-time Parking Layout Window
-- This window offers a live view of the mall's parking status, showing which parking slots are currently occupied or vacant.
-- It is intended for public display, allowing visitors and management to quickly check parking availability in real-time.
+- *Greedy Algorithm:* ParkGenius leverages a Greedy Algorithm to solve the assignment problem of parking vehicles in the most efficient manner based on weight.
+  
+- *Live Status Updates via HTTP Server:* A live status of the parking area is continuously updated and accessible through an HTTP server. This server generates a PNG file of the current parking layout, enabling users to access real-time parking information remotely.
 
-### 2. Security Desk Window
-- At the security desk, this window allows personnel to input vehicle details such as weight, reason for visit, time of entry, and the car's number plate.
-- Upon entry, the system automatically assigns a unique token (parking number) to the vehicle, which will serve as its identifier throughout the stay.
-
-### 3. Exit Point Window
-- This window is located at the parking exit. When a vehicle is ready to leave, the driver provides their assigned token to the security personnel.
-- The token number is entered into the system, which sends a notification to the entry point confirming that the car has exited, freeing up the corresponding parking space.
-
+- *Socket Programming (Winsock):* Utilized for real-time communication between entry and exit points, ensuring instant updates of parking space availability.
+  
 ## Communication and System Integration
 
 - The *message transfer between the entry and exit points* is facilitated using Winsock-based socket programming. This ensures real-time updates on the availability of parking spaces, enabling smooth coordination across the system.
@@ -31,9 +25,30 @@ ParkGenius is an advanced parking management system designed for the City Center
 
 ## How It Works
 
-- Vehicles entering the mall's parking area register their details at the security desk, where they receive a token.
-- The parking layout updates in real-time to reflect the new status, displaying the occupied slot.
-- When exiting, the token is entered at the exit point, signaling the system to update the parking layout and free up the space.
+### 1. Real-time Parking Layout Window
+- This window offers a live view of the mall's parking status, showing which parking slots are currently occupied or vacant.
+- It is intended for public display, allowing visitors and management to quickly check parking availability in real-time.
+
+### 2. Security Desk Window
+- At the security desk, this window allows personnel to input vehicle details such as weight, reason for visit, time of entry, and the car's number plate.
+- Upon entry, the system automatically assigns a unique token (parking number) to the vehicle, which will serve as its identifier throughout the stay.
+
+### 3. Exit Point Window
+- This window is located at the parking exit. When a vehicle is ready to leave, the driver provides their assigned token to the security personnel.
+- The token number is entered into the system, which sends a notification to the entry point confirming that the car has exited, freeing up the corresponding parking space.
+
+## Getting Started
+
+### Prerequisites
+  - *C++ Compiler*: Ensure you have a C++17 compatible compiler installed.
+  - *SFML*: The project requires SFML for graphics. You can download it from [SFML's official website](https://www.sfml-dev.org/download.php).
+
+### Installation
+1. Copy the source code from the file ParkGenius/ParkGenius_Entry/Project-ParkGenius.cpp for entry point of City Center Mall.
+2. Copy the source code from the file ParkGenius/ParkGenius_Exit/client.cpp For exit point.
+3. Download SFML and link to the project. Take reference of the Youtube video: https://www.youtube.com/watch?v=2jOzJ8SIpr8&list=PL6xSOsbVA1eaJnHo_O6uB4qU8LZWzzKdo&index=3
+4. Now the Installation is complete You can run the code with any enviornment.
+
 
 ## Conclusion
 
